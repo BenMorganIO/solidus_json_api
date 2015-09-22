@@ -2,6 +2,8 @@
 
 The second version of the Spree API that's JSON API compatible.
 
+Documentation: [http://spree-contrib.github.io/spree_api_v2](http://spree-contrib.github.io/spree_api_v2)
+
 ## Installation
 
 Add spree_api_v2 to your Gemfile:

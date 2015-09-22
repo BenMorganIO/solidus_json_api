@@ -1,3 +1,6 @@
+PROJECT_ROOT = File.expand_path '.'
+BUILD_DIR = File.expand_path './../build'
+
 # Markdown
 set :markdown_engine, :redcarpet
 set :markdown,
@@ -29,6 +32,7 @@ activate :relative_assets
 set :relative_links, true
 
 # Build Configuration
+set :build_dir, BUILD_DIR
 configure :build do
   activate :minify_css
   activate :minify_javascript
