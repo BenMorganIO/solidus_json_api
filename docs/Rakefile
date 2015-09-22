@@ -1,9 +1,0 @@
-ENV['MM_ROOT'] = File.expand_path '.'
-ENV['BUNDLE_GEMFILE'] = File.expand_path './Gemfile'
-
-require 'middleman-gh-pages'
-require 'rake/clean'
-
-CLOBBER.include('build')
-
-task :default => [:build]
