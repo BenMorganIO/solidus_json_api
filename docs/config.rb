@@ -1,3 +1,5 @@
+PROJECT_ROOT = File.expand_path '.'
+
 # Markdown
 set :markdown_engine, :redcarpet
 set :markdown,
