@@ -1,3 +1,5 @@
+ENV['MM_ROOT'] = File.expand_path '.'
+
 require 'middleman-gh-pages'
 require 'rake/clean'
 
