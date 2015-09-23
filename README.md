@@ -56,7 +56,7 @@ Below, you'll see a bullet list of requirements that are both specific to the ap
 | Checkout         |   [ ]   |   [ ]   |   [ ]   |   [ ]   |   [ ]   |
 | Country          |   [x]   |   [ ]   |   [x]   |   [ ]   |   [ ]   |
 | Image            |   [x]   |   [ ]   |   [x]   |   [ ]   |   [ ]   |
-| Line Item        |   [ ]   |   [x]   |   [ ]   |   [ ]   |   [ ]   |
+| Line Item        |   [ ]   |   nw    |   [ ]   |   [ ]   |   [ ]   |
 | Option Type      |   [x]   |   [ ]   |   [x]   |   [ ]   |   [ ]   |
 | Option Value     |   [x]   |   [ ]   |   [x]   |   [ ]   |   [ ]   |
 | Order            |   [x]   |   [ ]   |   [x]   |   [ ]   |   [ ]   |
