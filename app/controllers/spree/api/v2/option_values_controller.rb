@@ -5,11 +5,11 @@ module Spree
         skip_before_action :authenticate_user, only: [:index, :show]
 
         def index
-          super option_values.includes(:option_type, :variants)
+          render_collection option_values.includes(:option_type, :variants)
         end
 
         def show
-          super option_values.find(params[:id])
+          render_instance option_values.find(params[:id])
         end
 
         private

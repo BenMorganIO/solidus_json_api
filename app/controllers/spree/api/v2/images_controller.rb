@@ -5,11 +5,11 @@ module Spree
         skip_before_action :authenticate_user, only: [:index, :show]
 
         def index
-          super images.includes(:viewable)
+          render_collection images.includes(:viewable)
         end
 
         def show
-          super images.find(params[:id])
+          render_instance images.find(params[:id])
         end
 
         private

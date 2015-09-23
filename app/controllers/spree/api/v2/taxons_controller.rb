@@ -5,11 +5,11 @@ module Spree
         skip_before_action :authenticate_user, only: [:index, :show]
 
         def index
-          super taxons
+          render_collection taxons
         end
 
         def show
-          super taxon
+          render_instance taxon
         end
 
         private

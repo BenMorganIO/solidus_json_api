@@ -5,11 +5,11 @@ module Spree
         skip_before_action :authenticate_user
 
         def index
-          super params[:variant_id] ? prices : prices.includes(:variant)
+          render_collection params[:variant_id] ? prices : prices.includes(:variant)
         end
 
         def show
-          super prices.find(params[:id])
+          render_instance prices.find(params[:id])
         end
 
         private

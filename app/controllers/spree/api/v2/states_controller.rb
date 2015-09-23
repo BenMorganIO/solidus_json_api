@@ -5,11 +5,11 @@ module Spree
         skip_before_action :authenticate_user
 
         def index
-          super states
+          render_collection states
         end
 
         def show
-          super states.find(params[:id])
+          render_instance states.find(params[:id])
         end
 
         private

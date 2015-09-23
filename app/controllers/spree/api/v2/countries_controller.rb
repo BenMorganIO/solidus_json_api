@@ -5,14 +5,14 @@ module Spree
         skip_before_action :authenticate_user, only: [:index, :show]
 
         def index
-          super Spree::Country.includes(:states)
+          render_collection Spree::Country.includes(:states)
         end
 
         def show
           if params[:state_id].present?
-            super Spree::State.find_country(params[:state_id])
+            render_instance Spree::State.find_country(params[:state_id])
           else
-            super Spree::Country.find(params[:id])
+            render_instance Spree::Country.find(params[:id])
           end
         end
       end
