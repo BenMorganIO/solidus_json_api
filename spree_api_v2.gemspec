@@ -16,7 +16,8 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 3.0.4.beta'
+  s.add_dependency 'spree_api', '~> 3.0.4'
+  s.add_dependency 'active_model_serializers', '= 0.10.0.rc2'
 
   s.add_development_dependency 'capybara', '~> 2.4'
   s.add_development_dependency 'coffee-rails'
@@ -32,6 +33,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'pg'
   s.add_development_dependency 'json_spec', '~> 1.1.4'
   s.add_development_dependency 'shoulda-matchers'
-
-  s.add_dependency 'active_model_serializers', '= 0.10.0.rc2'
 end
