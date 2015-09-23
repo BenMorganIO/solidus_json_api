@@ -5,14 +5,14 @@ module Spree
         skip_before_action :authenticate_user, only: [:index, :show]
 
         def index
-          super Spree::Taxonomy.includes(:taxons)
+          render_collection Spree::Taxonomy.includes(:taxons)
         end
 
         def show
           if params[:taxon_id].present?
-            super Spree::Taxon.find(params[:taxon_id]).taxonomy
+            render_instance Spree::Taxon.find(params[:taxon_id]).taxonomy
           else
-            super Spree::Taxonomy.find(params[:id])
+            render_instance Spree::Taxonomy.find(params[:id])
           end
         end
       end

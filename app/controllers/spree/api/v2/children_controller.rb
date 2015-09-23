@@ -5,11 +5,11 @@ module Spree
         skip_before_action :authenticate_user, only: [:index, :show]
 
         def index
-          super children.includes(:products, :taxonomy, :children, :parent)
+          render_collection children.includes(:products, :taxonomy, :children, :parent)
         end
 
         def show
-          super children.find(params[:id])
+          render_instance children.find(params[:id])
         end
 
         private

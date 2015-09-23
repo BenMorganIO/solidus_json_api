@@ -10,7 +10,7 @@ module Spree
           variant = Spree::Variant.find(line_item_params[:variant_id])
           order = @current_api_user.orders.find(line_item_params[:order_id])
           line_item = order.contents.add(variant, line_item_params[:quantity])
-          render json: line_item, include: params[:include]
+          render_instance line_item
         end
 
         private

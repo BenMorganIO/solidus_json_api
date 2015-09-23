@@ -5,16 +5,16 @@ module Spree
         skip_before_action :authenticate_user
 
         def index
-          super variants.includes(:default_price, :prices, :option_values, :product, :images)
+          render_collection variants.includes(:default_price, :prices, :option_values, :product, :images)
         end
 
         def show
           if params[:price_id]
-            super Spree::Price.find(params[:price_id]).variant
+            render_instance Spree::Price.find(params[:price_id]).variant
           elsif params[:image_id]
-            super Spree::Image.variants.find(params[:image_id]).viewable
+            render_instance Spree::Image.variants.find(params[:image_id]).viewable
           else
-            super variants.find(params[:id])
+            render_instance variants.find(params[:id])
           end
         end
 
