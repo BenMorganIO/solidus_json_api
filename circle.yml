@@ -1,0 +1,12 @@
+---
+machine:
+  environment:
+    DB: postgres
+  services:
+    - postgresql
+  ruby:
+    version: 2.2.3
+
+test:
+  override:
+    - bundle exec rake
