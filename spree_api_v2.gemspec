@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.author    = 'Ben A. Morgan'
   s.email     = 'ben@benmorgan.io'
-  s.homepage  = 'http://www.spreecommerce.com'
+  s.homepage  = 'http://spree-contrib.github.io/spree_api_v2'
 
   s.files       = `git ls-files`.split("\n")
   s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
