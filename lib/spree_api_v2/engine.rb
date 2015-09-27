@@ -1,11 +1,11 @@
 module SpreeApiV2
   class Engine < Rails::Engine
-    if ENV['SOLIDUS_API']
-      require 'solidus/core'
-      engine_name 'solidus_api_v2'
-    else
+    if ENV['SOLIDUS_API'].nil?
       require 'spree/core'
       engine_name 'spree_api_v2'
+    else
+      require 'solidus/core'
+      engine_name 'solidus_api_v2'
     end
 
     isolate_namespace Spree
