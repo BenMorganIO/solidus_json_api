@@ -7,7 +7,7 @@
 
     [Ben A. Morgan](https://github.com/BenMorganIO)
 
-*   Added support for [Solidus](https://github.com/solidusio/solidus) has been added.
+*   Added support for [Solidus](https://github.com/solidusio/solidus).
 
     [Ben A. Morgan](https://github.com/BenMorganIO)
 
