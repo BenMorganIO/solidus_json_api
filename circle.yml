@@ -9,4 +9,5 @@ machine:
 
 test:
   override:
-    - bundle exec rake
+    - bundle exec rake GEMNAME=spree_api_v2
+    - bundle exec rake GEMNAME=solidus_api_v2

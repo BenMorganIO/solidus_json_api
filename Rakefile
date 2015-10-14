@@ -1,5 +1,5 @@
 require 'bundler'
-Bundler::GemHelper.install_tasks name: 'spree_api_v2'
+Bundler::GemHelper.install_tasks name: ENV['GEMNAME']
 
 require 'rspec/core/rake_task'
 
