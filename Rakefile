@@ -1,5 +1,5 @@
 require 'bundler'
-Bundler::GemHelper.install_tasks
+Bundler::GemHelper.install_tasks name: 'spree_api_v2'
 
 require 'rspec/core/rake_task'
 
@@ -9,9 +9,9 @@ require 'generators/spree/install/install_generator'
 RSpec::Core::RakeTask.new
 
 task :default do
-  if Dir["spec/dummy"].empty?
+  if Dir['spec/dummy'].empty?
     Rake::Task[:test_app].invoke
-    Dir.chdir("../../")
+    Dir.chdir('../../')
   end
   Rake::Task[:spec].invoke
 end
