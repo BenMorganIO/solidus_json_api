@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'solidus_api_v2'
   s.version     = '1.1.0'
-  s.summary     = 'The V2 API for Spree.'
+  s.summary     = 'The V2 API for Solidus.'
   s.description = 'Adds an assortment of new api endpoints that are JSON API compatible.'
   s.required_ruby_version = '>= 2.0.0'
 
@@ -32,5 +32,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'pg'
   s.add_development_dependency 'json_spec', '~> 1.1.4'
-  s.add_development_dependency 'shoulda-matchers'
+  s.add_development_dependency 'shoulda-matchers', '~> 3.0.0'
 end
