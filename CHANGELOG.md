@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1
+
+*   Fixes a bug where the user serializer wasn't extending from the `Spree::BaseSerializer` this is now fixed.
+
+    [Ben A. Morgan](https://github.com/BenMorganIO)
+
 ## 0.2.0
 
 *   Calling `super` inside fo `#index` and `#show` actions is now deprecated.
