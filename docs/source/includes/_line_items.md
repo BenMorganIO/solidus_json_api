@@ -3,7 +3,7 @@
 ## Create Line Item
 
 ```shell
-curl "https://kabuni.com/api/v2/line_items"
+curl "https://example.com/api/v2/line_items"
   -X POST
   -d token=abc123
   -d line_item[order_id]=1
@@ -53,7 +53,7 @@ This endpoint allows you add a variant to a users order by creating a line item.
 > Quantity is out of range.
 
 ```shell
-curl "https://kabuni.com/api/v2/line_items"
+curl "https://example.com/api/v2/line_items"
   -X POST
   -d token=abc123
   -d line_item[order_id]=1
@@ -80,7 +80,7 @@ When requesting an insanely large amount of variants to be added to your order, 
 > Order could not be found.
 
 ```shell
-curl "https://kabuni.com/api/v2/line_items"
+curl "https://example.com/api/v2/line_items"
   -X POST
   -d token=abc123
   -d line_item[order_id]=0
@@ -108,7 +108,7 @@ When this happens, you'll receive an error because of it.
 > Product is out of stock.
 
 ```shell
-curl "https://kabuni.com/api/v2/line_items"
+curl "https://example.com/api/v2/line_items"
   -X POST
   -d token=abc123
   -d line_item[order_id]=1

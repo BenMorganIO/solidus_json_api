@@ -1,7 +1,7 @@
 # Pagination
 
 ```shell
-curl "https://kabuni.com/api/v2/kitten?page[number]2&page[size]=20"
+curl "https://example.com/api/v2/kitten?page[number]2&page[size]=20"
 ```
 
 This projects supports the [JSON API's `page` keyword](http://jsonapi.org/format/#fetching-pagination).

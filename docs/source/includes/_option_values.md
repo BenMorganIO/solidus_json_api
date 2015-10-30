@@ -3,7 +3,7 @@
 ## List Option Values
 
 ```shell
-curl "https://kabuni.com/api/v2/option_values"
+curl "https://example.com/api/v2/option_values"
 ```
 
 ```json
@@ -35,7 +35,7 @@ List all of the option values.
 ## Show Option Value
 
 ```shell
-curl "https://kabuni.com/api/v2/option_values/1"
+curl "https://example.com/api/v2/option_values/1"
 ```
 
 ```json
@@ -65,7 +65,7 @@ Find an option value by its `id`.
 ## Show Option Type of an Option Value
 
 ```shell
-curl "https://kabuni.com/api/v2/option_values/1/option_type"
+curl "https://example.com/api/v2/option_values/1/option_type"
 ```
 
 ```json
@@ -105,7 +105,7 @@ Find the option type of an option value by the option value's `id`.
 ## List Variants of an Option Value
 
 ```shell
-curl "https://kabuni.com/api/v2/option_values/1/variants"
+curl "https://example.com/api/v2/option_values/1/variants"
 ```
 
 ```json
@@ -168,7 +168,7 @@ List all of the variants that belong to an option value via the option value's `
 ## Show Variant of an Option Value
 
 ```shell
-curl "https://kabuni.com/api/v2/option_values/1/variants/1"
+curl "https://example.com/api/v2/option_values/1/variants/1"
 ```
 
 ```json

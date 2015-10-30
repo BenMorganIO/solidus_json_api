@@ -3,7 +3,7 @@
 ## List Prices
 
 ```shell
-curl "https://kabuni.com/api/v2/prices"
+curl "https://example.com/api/v2/prices"
 ```
 
 ```json
@@ -37,7 +37,7 @@ List all of the prices in the database.
 ## Show Price
 
 ```shell
-curl "https://kabuni.com/api/v2/prices/1"
+curl "https://example.com/api/v2/prices/1"
 ```
 
 ```json
@@ -69,7 +69,7 @@ Fetch a price via its `id`.
 ## Show Variant of a Price
 
 ```shell
-curl "https://kabuni.com/api/v2/prices/1/variant"
+curl "https://example.com/api/v2/prices/1/variant"
 ```
 
 ```json
@@ -130,7 +130,7 @@ Fetch the variant a price belongs to via the price's `id`.
 ## Show Product of a Price
 
 ```shell
-curl "https://kabuni.com/api/v2/prices/1/product"
+curl "https://example.com/api/v2/prices/1/product"
 ```
 
 ```json

@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'solidus_api_v2'
-  s.version     = '0.2.1'
+  s.version     = '0.2.2'
   s.summary     = 'The V2 API for Solidus.'
   s.description = 'Adds an assortment of new api endpoints that are JSON API compatible.'
   s.required_ruby_version = '>= 2.0.0'

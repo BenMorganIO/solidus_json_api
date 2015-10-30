@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.2.2
+
+*   The parent serializer for `Spree::BaseSerializer` is now configurable.
+    In some instances, you may have an `ApplicationSerializer`.
+    To make the `Spree::BaseSerializer` use an `ApplicationSerializer` instead
+    of the `ActiveModel::Serializer`:
+
+    ```ruby
+    # config/initializers/spree_api_v2.rb; or
+    # config/initializers/solidus_api_v2.rb
+    SpreeApiV2.setup do |config|
+      config.parent_serializer = ApplicationSerializer
+    end
+
 ## 0.2.1
 
 *   Fixes a bug where the user serializer wasn't extending from the `Spree::BaseSerializer` this is now fixed.

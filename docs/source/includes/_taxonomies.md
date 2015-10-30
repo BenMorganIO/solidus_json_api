@@ -3,7 +3,7 @@
 ## List Taxonomies
 
 ```shell
-curl "https://kabuni.com/api/v2/taxonomies"
+curl "https://example.com/api/v2/taxonomies"
 ```
 
 ```json
@@ -48,7 +48,7 @@ List of the taxonomies in the database.
 ## Show Taxonomy
 
 ```shell
-curl "https://kabuni.com/api/v2/taxonomies/1"
+curl "https://example.com/api/v2/taxonomies/1"
 ```
 
 ```json
@@ -91,7 +91,7 @@ Select a taxonomy via the `id`.
 ## List Taxons of a Taxonomy
 
 ```shell
-curl "https://kabuni.com/api/v2/taxonomies/1/taxons"
+curl "https://example.com/api/v2/taxonomies/1/taxons"
 ```
 
 ```json
@@ -177,7 +177,7 @@ List all of the taxons that a taxonomy has a reference to.
 ## Show Taxon of a Taxonomy
 
 ```shell
-curl "https://kabuni.com/api/v2/taxonomies/1/taxons/1"
+curl "https://example.com/api/v2/taxonomies/1/taxons/1"
 ```
 
 ```json
@@ -224,7 +224,7 @@ Find a taxon that the taxonomy owns via the taxonomy's `id` and the taxon's `id`
 ## List Children of a Taxonomy
 
 ```shell
-curl "https://kabuni.com/api/v2/taxonomies/1/children"
+curl "https://example.com/api/v2/taxonomies/1/children"
 ```
 
 ```json
@@ -277,7 +277,7 @@ This does _not_ include the root taxon that would be included when listing all o
 ## Show Child of a Taxonomy
 
 ```shell
-curl "https://kabuni.com/api/v2/taxonomies/1/children/2"
+curl "https://example.com/api/v2/taxonomies/1/children/2"
 ```
 
 ```json

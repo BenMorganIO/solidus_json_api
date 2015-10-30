@@ -3,7 +3,7 @@
 ## List States
 
 ```shell
-curl "https://kabuni.com/api/v2/states"
+curl "https://example.com/api/v2/states"
 ```
 
 ```json
@@ -34,7 +34,7 @@ This will list all of the states.
 ## Show State
 
 ```shell
-curl "https://kabuni.com/api/v2/states/1"
+curl "https://example.com/api/v2/states/1"
 ```
 
 ```json
@@ -63,7 +63,7 @@ Select a state via its `id`.
 ## Show Country of a States
 
 ```shell
-curl "https://kabuni.com/api/v2/states/1/countries"
+curl "https://example.com/api/v2/states/1/countries"
 ```
 
 ```json

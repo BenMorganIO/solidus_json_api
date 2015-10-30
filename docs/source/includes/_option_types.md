@@ -3,7 +3,7 @@
 ## List Option Types
 
 ```shell
-curl "https://kabuni.com/api/v2/option_types"
+curl "https://example.com/api/v2/option_types"
 ```
 
 ```json
@@ -45,7 +45,7 @@ List all of the option types in the database.
 ## Show Option Type
 
 ```shell
-curl "https://kabuni.com/api/v2/option_types/1"
+curl "https://example.com/api/v2/option_types/1"
 ```
 
 ```json
@@ -85,7 +85,7 @@ Fetch an option type in the database.
 ## List Option Values of a Option Type
 
 ```shell
-curl "https://kabuni.com/api/v2/option_types/1/option_values"
+curl "https://example.com/api/v2/option_types/1/option_values"
 ```
 
 ```json
@@ -117,7 +117,7 @@ See all of the option values that an option type owns.
 ## Show Option Values of a Option Type
 
 ```shell
-curl "https://kabuni.com/api/v2/option_types/1/option_values/1"
+curl "https://example.com/api/v2/option_types/1/option_values/1"
 ```
 
 ```json
@@ -147,7 +147,7 @@ Fetch an option value that an option type owns.
 ## List Products of a Option Type
 
 ```shell
-curl "https://kabuni.com/api/v2/option_types/1/products"
+curl "https://example.com/api/v2/option_types/1/products"
 ```
 
 ```json
@@ -209,7 +209,7 @@ See all of the products that an option type owns.
 ## Show Product of a Option Type
 
 ```shell
-curl "https://kabuni.com/api/v2/option_types/1/products/1"
+curl "https://example.com/api/v2/option_types/1/products/1"
 ```
 
 ```json

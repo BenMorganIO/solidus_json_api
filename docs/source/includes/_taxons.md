@@ -3,7 +3,7 @@
 ## List Taxons
 
 ```shell
-curl "https://kabuni.com/api/v2/taxons"
+curl "https://example.com/api/v2/taxons"
 ```
 
 ```json
@@ -55,7 +55,7 @@ List all the taxons in the database.
 ## Show Taxon
 
 ```shell
-curl "https://kabuni.com/api/v2/taxons/1"
+curl "https://example.com/api/v2/taxons/1"
 ```
 
 ```json
@@ -102,7 +102,7 @@ Locate the taxon that you're looking for via its `id`.
 ## Show Taxonomy of a Taxon
 
 ```shell
-curl "https://kabuni.com/api/v2/taxons/1/taxonomy"
+curl "https://example.com/api/v2/taxons/1/taxonomy"
 ```
 
 ```json
@@ -145,7 +145,7 @@ Display the taxonomy that a taxon belongs.
 ## Show Parent of a Taxon
 
 ```shell
-curl "https://kabuni.com/api/v2/taxons/2/parent"
+curl "https://example.com/api/v2/taxons/2/parent"
 ```
 
 ```json
@@ -192,7 +192,7 @@ Display the parent taxon that a taxon may belong to.
 ## List Children of a Taxon
 
 ```shell
-curl "https://kabuni.com/api/v2/taxons/1/children"
+curl "https://example.com/api/v2/taxons/1/children"
 ```
 
 ```json
@@ -244,7 +244,7 @@ List all the children that a taxon has.
 ## Show Child of a Taxon
 
 ```shell
-curl "https://kabuni.com/api/v2/taxons/1/children/2"
+curl "https://example.com/api/v2/taxons/1/children/2"
 ```
 
 ```json
@@ -294,7 +294,7 @@ Find a child via its `id` and its owners (taxon) `id`.
 ## List Products of a Taxon
 
 ```shell
-curl "https://kabuni.com/api/v2/taxons/1/products"
+curl "https://example.com/api/v2/taxons/1/products"
 ```
 
 ```json
@@ -356,7 +356,7 @@ List all of the products that taxon owns via the taxons `id`.
 ## Show Product of a Taxon
 
 ```shell
-curl "https://kabuni.com/api/v2/taxons/1/products/10"
+curl "https://example.com/api/v2/taxons/1/products/10"
 ```
 
 ```json

@@ -91,8 +91,4 @@ bundle exec rake GEMNAME=spree_api_v2
 bundle exec rake GEMNAME=solidus_api_v2
 ```
 
-## Sponsored by:
-
-[![Kabuni](https://assets.kabuni.com/kabuni-secondary-logomark-xlarge.png)](https://kabuni.com?utm_source=SpreeApiV2&utm_medium=sponsor&utm_campaign=opensource)
-
 Copyright &copy; 2015 Ben A. Morgan, released under the New BSD License
