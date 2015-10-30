@@ -3,7 +3,7 @@
 ## List Images
 
 ```shell
-curl "https://kabuni.com/api/v2/images"
+curl "https://example.com/api/v2/images"
 ```
 
 ```json
@@ -41,7 +41,7 @@ List all of the images stored in the database.
 ## Show Image
 
 ```shell
-curl "https://kabuni.com/api/v2/images/1"
+curl "https://example.com/api/v2/images/1"
 ```
 
 ```json
@@ -77,7 +77,7 @@ Fetch an image and its links via the image's `id`.
 ## Show Variant of an Image
 
 ```shell
-curl "https://kabuni.com/api/v2/images/1/variant"
+curl "https://example.com/api/v2/images/1/variant"
 ```
 
 ```json
@@ -138,7 +138,7 @@ Fetch the variant that an image belongs to via the variant's `id`.
 ## Show Product of an Image
 
 ```shell
-curl "https://kabuni.com/api/v2/images/1/product"
+curl "https://example.com/api/v2/images/1/product"
 ```
 
 ```json

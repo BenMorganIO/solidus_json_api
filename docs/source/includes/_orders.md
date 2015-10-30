@@ -3,7 +3,7 @@
 ## Show Order
 
 ```shell
-curl "https://kabuni.com/api/v2/orders/:id"
+curl "https://example.com/api/v2/orders/:id"
   -d token=abc123
 ```
 

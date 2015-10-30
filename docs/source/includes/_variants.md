@@ -3,7 +3,7 @@
 ## List Variants
 
 ```shell
-curl "https://kabuni.com/api/v2/variants"
+curl "https://example.com/api/v2/variants"
 ```
 
 ```json
@@ -70,7 +70,7 @@ List all variants in the DB including master variants.
 ## Show Variant
 
 ```shell
-curl "https://kabuni.com/api/v2/variants/1"
+curl "https://example.com/api/v2/variants/1"
 ```
 
 ```json
@@ -135,7 +135,7 @@ Fetch a variant by its `id`.
 ## List Prices of a Variant
 
 ```shell
-curl "https://kabuni.com/api/v2/variants/1/prices"
+curl "https://example.com/api/v2/variants/1/prices"
 ```
 
 ```json
@@ -188,7 +188,7 @@ List all of the prices for a variant.
 ## Show Price of a Variant
 
 ```shell
-curl "https://kabuni.com/api/v2/variants/1/prices/1"
+curl "https://example.com/api/v2/variants/1/prices/1"
 ```
 
 ```json
@@ -220,7 +220,7 @@ Fetch a price for a variant by the price and variants `id`.
 ## Show Product of a Variant
 
 ```shell
-curl "https://kabuni.com/api/v2/variants/1/product"
+curl "https://example.com/api/v2/variants/1/product"
 ```
 
 ```json
@@ -280,7 +280,7 @@ Fetch the product the a variant belongs to by the variant's `id`.
 ## List Option Values of a Variant
 
 ```shell
-curl "https://kabuni.com/api/v2/variants/1/option_values"
+curl "https://example.com/api/v2/variants/1/option_values"
 ```
 
 ```json
@@ -320,7 +320,7 @@ List all of the option values that belong to a variant via the variant's `id`.
 ## Show Option Value of a Variant
 
 ```shell
-curl "https://kabuni.com/api/v2/variants/1/option_values/1"
+curl "https://example.com/api/v2/variants/1/option_values/1"
 ```
 
 ```json
@@ -358,7 +358,7 @@ Fetch an option value via the option value's `id` and the variant's `id`.
 ## List Images of a Variant
 
 ```shell
-curl "https://kabuni.com/api/v2/variants/1/images"
+curl "https://example.com/api/v2/variants/1/images"
 ```
 
 ```json
@@ -396,7 +396,7 @@ List all of the images of a variant via the variant's `id`.
 ## Show Image of a Variant
 
 ```shell
-curl "https://kabuni.com/api/v2/variants/1/images/21"
+curl "https://example.com/api/v2/variants/1/images/21"
 ```
 
 ```json

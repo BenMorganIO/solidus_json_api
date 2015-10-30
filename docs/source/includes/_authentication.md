@@ -2,7 +2,7 @@
 
 ```shell
 # Specifying the token as a header.
-curl "https://kabuni.com/api/v1/endpoint"
+curl "https://example.com/api/v1/endpoint"
   -H "X-Spree-Token: abc123"
 
 # Specifying the token as a param.
@@ -20,7 +20,7 @@ Spree does not expect every request to require an API key (such as reading publi
 ## Authenticate a User (Login)
 
 ```shell
-curl "https://kabuni.com/api/v1/account/signin"
+curl "https://example.com/api/v1/account/signin"
   -X POST
   -d user[email]=spree@example.com
   -d user[password]=spree123

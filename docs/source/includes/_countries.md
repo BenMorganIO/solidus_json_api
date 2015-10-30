@@ -3,7 +3,7 @@
 ## List Countries
 
 ```shell
-curl "https://kabuni.com/api/v2/countries"
+curl "https://example.com/api/v2/countries"
 ```
 
 ```json
@@ -40,7 +40,7 @@ List all of the ~200 countries in the DB.
 ## Show Country
 
 ```shell
-curl "https://kabuni.com/api/v2/countries/1"
+curl "https://example.com/api/v2/countries/1"
 ```
 
 ```json
@@ -75,7 +75,7 @@ Select a country via its `id`.
 ## List States of a Country
 
 ```shell
-curl "https://kabuni.com/api/v2/countries/1/states"
+curl "https://example.com/api/v2/countries/1/states"
 ```
 
 ```json
@@ -106,7 +106,7 @@ See all of the states that a country owns via the country's `id`.
 ## Show State of a Country
 
 ```shell
-curl "https://kabuni.com/api/v2/countries/1/states/1"
+curl "https://example.com/api/v2/countries/1/states/1"
 ```
 
 ```json

@@ -3,7 +3,7 @@
 ## List Products
 
 ```shell
-curl "https://kabuni.com/api/v2/products"
+curl "https://example.com/api/v2/products"
 ```
 
 ```json
@@ -65,7 +65,7 @@ List all of the products in the database.
 ## Show Product
 
 ```shell
-curl "https://kabuni.com/api/v2/products/1"
+curl "https://example.com/api/v2/products/1"
 ```
 
 ```json
@@ -125,7 +125,7 @@ Select a product via it's `id`.
 ## List Option Types of a Product
 
 ```shell
-curl "https://kabuni.com/api/v2/products/1/option_types"
+curl "https://example.com/api/v2/products/1/option_types"
 ```
 
 ```json
@@ -167,7 +167,7 @@ List all of the option types that a product owns via the product's `id`.
 ## Show Option Type of a Product
 
 ```shell
-curl "https://kabuni.com/api/v2/products/1/option_types/1"
+curl "https://example.com/api/v2/products/1/option_types/1"
 ```
 
 ```json
@@ -207,7 +207,7 @@ Fetch an option type of a product by both of their `id`s.
 ## List Variants of a Product
 
 ```shell
-curl "https://kabuni.com/api/v2/products/1/variants"
+curl "https://example.com/api/v2/products/1/variants"
 ```
 
 ```json
@@ -270,7 +270,7 @@ List all variants including the master of a product by the products `id`.
 ## Show Variant of a Product
 
 ```shell
-curl "https://kabuni.com/api/v2/products/1/variants/1"
+curl "https://example.com/api/v2/products/1/variants/1"
 ```
 
 ```json
@@ -331,7 +331,7 @@ Fetch a variant or a product's master variant that a product owns by the product
 ## List Images of a Product
 
 ```shell
-curl "https://kabuni.com/api/v2/products/1/images"
+curl "https://example.com/api/v2/products/1/images"
 ```
 
 ```json
@@ -369,7 +369,7 @@ List all of the images that belong to a product via the product's `id`.
 ## Show Image of a Product
 
 ```shell
-curl "https://kabuni.com/api/v2/products/1/images/21"
+curl "https://example.com/api/v2/products/1/images/21"
 ```
 
 ```json
