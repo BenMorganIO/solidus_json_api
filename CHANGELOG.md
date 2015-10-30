@@ -13,6 +13,9 @@
     SpreeApiV2.setup do |config|
       config.parent_serializer = ApplicationSerializer
     end
+    ```
+
+    [Ben A. Morgan](https://github.com/BenMorganIO)
 
 ## 0.2.1
 
