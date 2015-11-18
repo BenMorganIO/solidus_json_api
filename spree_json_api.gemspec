@@ -1,7 +1,7 @@
 # encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'solidus_json_api'
+  s.name        = 'spree_json_api'
   s.version     = '0.2.2'
   s.summary     = 'A JSON API for Spree.'
   s.description = 'Adds an assortment of new api endpoints that are JSON API compatible.'
