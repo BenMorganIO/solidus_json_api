@@ -20,7 +20,7 @@ Spree::Core::Engine.routes.draw do
         resources :variants, only: [:index, :show]
       end
 
-      resources :orders, only: :show
+      resources :orders, only: [:index, :show]
 
       resources :prices, only: [:index, :show] do
         resource :variant, :product, only: :show
