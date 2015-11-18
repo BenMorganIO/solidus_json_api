@@ -5,7 +5,7 @@ language_tabs:
   - shell
 
 toc_footers:
-  - <a href="https://github.com/wildcardlabs/solidus_json_api" target="_blank"> Source Code </a>
+  - <a href="http://solidusapi.wildcardlabs.com" target="_blank"> Source Code </a>
   - <a href="https://guides.spreecommerce.com/api/" target="_blank"> Spree API Documentation </a>
   - <a href="http://jsonapi.org/" target="_blank"> JSON API Documentation </a>
   - <a href="https://github.com/tripit/slate" target="_blank"> Documentation Powered by Slate </a>

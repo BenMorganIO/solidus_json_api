@@ -7,12 +7,12 @@ Gem::Specification.new do |s|
   s.description = 'Adds an assortment of new api endpoints that are JSON API compatible.'
   s.required_ruby_version = '>= 2.0.0'
 
-  s.author    = 'Ben A. Morgan'
-  s.email     = 'ben@benmorgan.io'
-  s.homepage  = 'http://wildcardlabs.github.io/solidus_json_api'
+  s.author   = 'Ben A. Morgan'
+  s.email    = 'ben@benmorgan.io'
+  s.homepage = 'http://solidusapi.wildcardlabs.com'
 
-  s.files       = `git ls-files`.split("\n")
-  s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.files        = `git ls-files`.split("\n")
+  s.test_files   = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
