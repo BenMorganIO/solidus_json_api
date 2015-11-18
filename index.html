@@ -1039,6 +1039,77 @@ This can happen for both two reasons:</p>
 
           <h1 id="orders">Orders</h1>
 
+<h2 id="list-orders">List Orders</h2>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/orders"</span>
+  -d <span class="nv">token</span><span class="o">=</span>abc123
+</code></pre>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"additional_tax_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"adjustment_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"approved_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"canceled_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"channel"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"spree"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"completed_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-09-08T04:04:01.162Z"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"confirmation_delivered"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"currency"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"CAD"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"display_additional_tax_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"$0.00 CAD"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"display_adjustment_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"$0.00 CAD"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"display_included_tax_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"$0.00 CAD"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"display_item_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"$10.00 CAD"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"display_promo_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"$0.00 CAD"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"display_shipment_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"$100.00 CAD"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"display_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"$110.00 CAD"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"spree@example.com"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"included_tax_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"item_count"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"item_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"10.0"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"number"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"#R123456789"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"payment_state"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"payment_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"promo_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"shipment_state"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"shipment_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"100.0"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"special_instructions"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"state"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"complete"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"store_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Store"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"110.0"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"relationships"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"bill_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"spree_addresses"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"line_items"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"spree_line_items"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"ship_address"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"spree_addresses"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"user"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"spree_users"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"spree_orders"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>List all of the orders in the DB if you&rsquo;re an admin.
+If you&rsquo;re a standard user, then only the orders that you own are listed.</p>
+
 <h2 id="show-order">Show Order</h2>
 <pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/orders/:id"</span>
   -d <span class="nv">token</span><span class="o">=</span>abc123
@@ -1106,7 +1177,8 @@ This can happen for both two reasons:</p>
 </span></code></pre>
 
 <p>This will get an order via the id supplied.
-Please note that you can ony access the orders that you own.</p>
+Please note that you can ony access the orders that you own.
+If you are an admin, you can view any order.</p>
 
           <h1 id="prices">Prices</h1>
 
