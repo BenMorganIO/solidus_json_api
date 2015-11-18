@@ -1,11 +1,11 @@
 ---
-title: Spree API V2 Reference
+title: Solidus JSON API Reference
 
 language_tabs:
   - shell
 
 toc_footers:
-  - <a href="https://github.com/spree-contrib/spree_api_v2"> Source Code </a>
+  - <a href="https://github.com/wildcardlabs/solidus_json_api" target="_blank"> Source Code </a>
   - <a href="https://guides.spreecommerce.com/api/" target="_blank"> Spree API Documentation </a>
   - <a href="http://jsonapi.org/" target="_blank"> JSON API Documentation </a>
   - <a href="https://github.com/tripit/slate" target="_blank"> Documentation Powered by Slate </a>
@@ -34,7 +34,7 @@ search: true
 
 # Introduction
 
-Welcome to the Spree API V2 API!
+Welcome to the Soidus JSON API!
 You can use our API to grab data from our database and make updates.
 
 We currently only have a language binding in Shell.

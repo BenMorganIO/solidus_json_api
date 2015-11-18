@@ -1,6 +1,6 @@
 # Errors
 
-The Spree API uses the following error codes:
+The Solidus JSON API uses the following error codes:
 
 Error Code | Meaning
 ---------- | -------
