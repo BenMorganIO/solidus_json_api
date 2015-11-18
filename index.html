@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Spree API V2 Reference</title>
+    <title>Solidus JSON API Reference</title>
 
     <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
@@ -37,11 +37,10 @@
       <div id="toc">
       </div>
         <ul class="toc-footer">
-            <li><a href="https://github.com/spree-contrib/spree_api_v2"> Source Code </a></li>
+            <li><a href="http://solidusapi.wildcardlabs.com" target="_blank"> Source Code </a></li>
             <li><a href="https://guides.spreecommerce.com/api/" target="_blank"> Spree API Documentation </a></li>
             <li><a href="http://jsonapi.org/" target="_blank"> JSON API Documentation </a></li>
             <li><a href="https://github.com/tripit/slate" target="_blank"> Documentation Powered by Slate </a></li>
-            <li><a href="https://kabuni.com?utm_source=SpreeApiV2Docs&utm_medium=sponsor&utm_campaign=opensource"> Kabuni, Proud Sponsor </a></li>
         </ul>
     </div>
     <div class="page-wrapper">
@@ -49,7 +48,7 @@
       <div class="content">
         <h1 id="introduction">Introduction</h1>
 
-<p>Welcome to the Spree API V2 API!
+<p>Welcome to the Soidus JSON API!
 You can use our API to grab data from our database and make updates.</p>
 
 <p>We currently only have a language binding in Shell.
@@ -75,7 +74,7 @@ curl <span class="s2">"https://example.com/api/v1/endpoint"</span>
   -H <span class="s2">"X-Spree-Token: abc123"</span>
 
 <span class="c"># Specifying the token as a param.</span>
-curl <span class="s2">"/api/v1/endpoint"</span>
+curl <span class="s2">"https://example.com/api/v1/endpoint"</span>
   -d <span class="nv">token</span><span class="o">=</span>abc123
 </code></pre>
 
@@ -129,7 +128,7 @@ The response&rsquo;s headers will include a <code class="prettyprint">X-Spree-To
 
           <h1 id="errors">Errors</h1>
 
-<p>The Spree API uses the following error codes:</p>
+<p>The Solidus JSON API uses the following error codes:</p>
 
 <table><thead>
 <tr>
@@ -519,8 +518,8 @@ Please see the example requests to the side on how you my filter a kitten object
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"attributes"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"additional_tax_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"adjustment_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"additional_tax_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"adjustment_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"amount"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"10.0"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"cost_price"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"17.0"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"currency"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"CAD"</span><span class="p">,</span><span class="w">
@@ -1104,7 +1103,6 @@ This can happen for both two reasons:</p>
       </span><span class="nt">"channel"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"spree"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"completed_at"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-09-08T04:04:01.162Z"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"confirmation_delivered"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"considered_risky"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="nt">"currency"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"CAD"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"display_additional_tax_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"$0.00 CAD"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"display_adjustment_total"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"$0.00 CAD"</span><span class="p">,</span><span class="w">
