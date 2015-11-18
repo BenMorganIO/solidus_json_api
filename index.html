@@ -71,7 +71,7 @@ Please follow its guidelines to learn about:</p>
 
           <h1 id="authentication">Authentication</h1>
 <pre class="highlight shell"><code><span class="c"># Specifying the token as a header.</span>
-curl <span class="s2">"https://kabuni.com/api/v1/endpoint"</span>
+curl <span class="s2">"https://example.com/api/v1/endpoint"</span>
   -H <span class="s2">"X-Spree-Token: abc123"</span>
 
 <span class="c"># Specifying the token as a param.</span>
@@ -89,7 +89,7 @@ To obtain a token, you must either create a new user, or, via token authenticati
 <p>Spree does not expect every request to require an API key (such as reading public product data).</p>
 
 <h2 id="authenticate-a-user-login">Authenticate a User (Login)</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v1/account/signin"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v1/account/signin"</span>
   -X POST
   -d user[email]<span class="o">=</span>spree@example.com
   -d user[password]<span class="o">=</span>spree123
@@ -184,7 +184,7 @@ The response&rsquo;s headers will include a <code class="prettyprint">X-Spree-To
 </tbody></table>
 
           <h1 id="pagination">Pagination</h1>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/kitten?page[number]2&amp;page[size]=20"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/kitten?page[number]2&amp;page[size]=20"</span>
 </code></pre>
 
 <p>This projects supports the <a href="http://jsonapi.org/format/#fetching-pagination">JSON API&rsquo;s <code class="prettyprint">page</code> keyword</a>.
@@ -193,9 +193,9 @@ To specify the page size (the amount of records returned), set a <code class="pr
 If you would like the links to the <code class="prettyprint">self</code>, <code class="prettyprint">next</code>, <code class="prettyprint">prev</code>, <code class="prettyprint">first</code>, and <code class="prettyprint">last</code> it is not yet supported.</p>
 
           <h1 id="filtering">Filtering</h1>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/kittens?filter[id]=1"</span>
-curl <span class="s2">"https://kabuni.com/api/v2/kittens?filter[id]=2,3,4"</span>
-curl <span class="s2">"https://kabuni.com/api/v2/kittens?filter[breed]=Persian,British%20Shorthair,Bengal"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/kittens?filter[id]=1"</span>
+curl <span class="s2">"https://example.com/api/v2/kittens?filter[id]=2,3,4"</span>
+curl <span class="s2">"https://example.com/api/v2/kittens?filter[breed]=Persian,British%20Shorthair,Bengal"</span>
 </code></pre>
 
 <p>This project supports the <a href="http://jsonapi.org/format/#fetching-filtering">JSON API&rsquo;s <code class="prettyprint">filter</code> keyword</a> with only the root object, not any of its relationships yet.
@@ -205,7 +205,7 @@ Please see the example requests to the side on how you my filter a kitten object
           <h1 id="countries">Countries</h1>
 
 <h2 id="list-countries">List Countries</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/countries"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/countries"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -238,7 +238,7 @@ Please see the example requests to the side on how you my filter a kitten object
 <p>List all of the ~200 countries in the DB.</p>
 
 <h2 id="show-country">Show Country</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/countries/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/countries/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -269,7 +269,7 @@ Please see the example requests to the side on how you my filter a kitten object
 <p>Select a country via its <code class="prettyprint">id</code>.</p>
 
 <h2 id="list-states-of-a-country">List States of a Country</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/countries/1/states"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/countries/1/states"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -296,7 +296,7 @@ Please see the example requests to the side on how you my filter a kitten object
 <p>See all of the states that a country owns via the country&rsquo;s <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-state-of-a-country">Show State of a Country</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/countries/1/states/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/countries/1/states/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -323,7 +323,7 @@ Please see the example requests to the side on how you my filter a kitten object
           <h1 id="images">Images</h1>
 
 <h2 id="list-images">List Images</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/images"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/images"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -357,7 +357,7 @@ Please see the example requests to the side on how you my filter a kitten object
 <p>List all of the images stored in the database.</p>
 
 <h2 id="show-image">Show Image</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/images/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/images/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -389,7 +389,7 @@ Please see the example requests to the side on how you my filter a kitten object
 <p>Fetch an image and its links via the image&rsquo;s <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-variant-of-an-image">Show Variant of an Image</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/images/1/variant"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/images/1/variant"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -446,7 +446,7 @@ Please see the example requests to the side on how you my filter a kitten object
 <p>Fetch the variant that an image belongs to via the variant&rsquo;s <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-product-of-an-image">Show Product of an Image</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/images/1/product"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/images/1/product"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -509,7 +509,7 @@ Please see the example requests to the side on how you my filter a kitten object
           <h1 id="line-items">Line Items</h1>
 
 <h2 id="create-line-item">Create Line Item</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/line_items"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/line_items"</span>
   -X POST
   -d <span class="nv">token</span><span class="o">=</span>abc123
   -d line_item[order_id]<span class="o">=</span>1
@@ -557,7 +557,7 @@ Please see the example requests to the side on how you my filter a kitten object
 <blockquote>
 <p>Quantity is out of range.</p>
 </blockquote>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/line_items"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/line_items"</span>
   -X POST
   -d <span class="nv">token</span><span class="o">=</span>abc123
   -d line_item[order_id]<span class="o">=</span>1
@@ -582,7 +582,7 @@ Please see the example requests to the side on how you my filter a kitten object
 <blockquote>
 <p>Order could not be found.</p>
 </blockquote>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/line_items"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/line_items"</span>
   -X POST
   -d <span class="nv">token</span><span class="o">=</span>abc123
   -d line_item[order_id]<span class="o">=</span>0
@@ -608,7 +608,7 @@ When this happens, you&rsquo;ll receive an error because of it.</p>
 <blockquote>
 <p>Product is out of stock.</p>
 </blockquote>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/line_items"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/line_items"</span>
   -X POST
   -d <span class="nv">token</span><span class="o">=</span>abc123
   -d line_item[order_id]<span class="o">=</span>1
@@ -639,7 +639,7 @@ This can happen for both two reasons:</p>
           <h1 id="option-types">Option Types</h1>
 
 <h2 id="list-option-types">List Option Types</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/option_types"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/option_types"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -677,7 +677,7 @@ This can happen for both two reasons:</p>
 <p>List all of the option types in the database.</p>
 
 <h2 id="show-option-type">Show Option Type</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/option_types/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/option_types/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -713,7 +713,7 @@ This can happen for both two reasons:</p>
 <p>Fetch an option type in the database.</p>
 
 <h2 id="list-option-values-of-a-option-type">List Option Values of a Option Type</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/option_types/1/option_values"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/option_types/1/option_values"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -741,7 +741,7 @@ This can happen for both two reasons:</p>
 <p>See all of the option values that an option type owns.</p>
 
 <h2 id="show-option-values-of-a-option-type">Show Option Values of a Option Type</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/option_types/1/option_values/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/option_types/1/option_values/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -767,7 +767,7 @@ This can happen for both two reasons:</p>
 <p>Fetch an option value that an option type owns.</p>
 
 <h2 id="list-products-of-a-option-type">List Products of a Option Type</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/option_types/1/products"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/option_types/1/products"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -825,7 +825,7 @@ This can happen for both two reasons:</p>
 <p>See all of the products that an option type owns.</p>
 
 <h2 id="show-product-of-a-option-type">Show Product of a Option Type</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/option_types/1/products/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/option_types/1/products/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -883,7 +883,7 @@ This can happen for both two reasons:</p>
           <h1 id="option-values">Option Values</h1>
 
 <h2 id="list-option-values">List Option Values</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/option_values"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/option_values"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -911,7 +911,7 @@ This can happen for both two reasons:</p>
 <p>List all of the option values.</p>
 
 <h2 id="show-option-value">Show Option Value</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/option_values/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/option_values/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -937,7 +937,7 @@ This can happen for both two reasons:</p>
 <p>Find an option value by its <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-option-type-of-an-option-value">Show Option Type of an Option Value</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/option_values/1/option_type"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/option_values/1/option_type"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -973,7 +973,7 @@ This can happen for both two reasons:</p>
 <p>Find the option type of an option value by the option value&rsquo;s <code class="prettyprint">id</code>.</p>
 
 <h2 id="list-variants-of-an-option-value">List Variants of an Option Value</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/option_values/1/variants"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/option_values/1/variants"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1032,7 +1032,7 @@ This can happen for both two reasons:</p>
 <p>List all of the variants that belong to an option value via the option value&rsquo;s <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-variant-of-an-option-value">Show Variant of an Option Value</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/option_values/1/variants/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/option_values/1/variants/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1091,7 +1091,7 @@ This can happen for both two reasons:</p>
           <h1 id="orders">Orders</h1>
 
 <h2 id="show-order">Show Order</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v1/orders/:id"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/orders/:id"</span>
   -d <span class="nv">token</span><span class="o">=</span>abc123
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
@@ -1163,7 +1163,7 @@ Please note that you can ony access the orders that you own.</p>
           <h1 id="prices">Prices</h1>
 
 <h2 id="list-prices">List Prices</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/prices"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/prices"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1193,7 +1193,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>List all of the prices in the database.</p>
 
 <h2 id="show-price">Show Price</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/prices/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/prices/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1221,7 +1221,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>Fetch a price via its <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-variant-of-a-price">Show Variant of a Price</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/prices/1/variant"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/prices/1/variant"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1278,7 +1278,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>Fetch the variant a price belongs to via the price&rsquo;s <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-product-of-a-price">Show Product of a Price</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/prices/1/product"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/prices/1/product"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1336,7 +1336,7 @@ Please note that you can ony access the orders that you own.</p>
           <h1 id="products">Products</h1>
 
 <h2 id="list-products">List Products</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/products"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/products"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1394,7 +1394,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>List all of the products in the database.</p>
 
 <h2 id="show-product">Show Product</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/products/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/products/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1450,7 +1450,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>Select a product via it&rsquo;s <code class="prettyprint">id</code>.</p>
 
 <h2 id="list-option-types-of-a-product">List Option Types of a Product</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/products/1/option_types"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/products/1/option_types"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1488,7 +1488,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>List all of the option types that a product owns via the product&rsquo;s <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-option-type-of-a-product">Show Option Type of a Product</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/products/1/option_types/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/products/1/option_types/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1524,7 +1524,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>Fetch an option type of a product by both of their <code class="prettyprint">id</code>s.</p>
 
 <h2 id="list-variants-of-a-product">List Variants of a Product</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/products/1/variants"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/products/1/variants"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1583,7 +1583,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>List all variants including the master of a product by the products <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-variant-of-a-product">Show Variant of a Product</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/products/1/variants/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/products/1/variants/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1640,7 +1640,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>Fetch a variant or a product&rsquo;s master variant that a product owns by the products <code class="prettyprint">id</code>.</p>
 
 <h2 id="list-images-of-a-product">List Images of a Product</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/products/1/images"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/products/1/images"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1674,7 +1674,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>List all of the images that belong to a product via the product&rsquo;s <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-image-of-a-product">Show Image of a Product</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/products/1/images/21"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/products/1/images/21"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1708,7 +1708,7 @@ Please note that you can ony access the orders that you own.</p>
           <h1 id="states">States</h1>
 
 <h2 id="list-states">List States</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/states"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/states"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1735,7 +1735,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>This will list all of the states.</p>
 
 <h2 id="show-state">Show State</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/states/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/states/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1760,7 +1760,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>Select a state via its <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-country-of-a-states">Show Country of a States</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/states/1/countries"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/states/1/countries"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1793,7 +1793,7 @@ Please note that you can ony access the orders that you own.</p>
           <h1 id="taxonomies">Taxonomies</h1>
 
 <h2 id="list-taxonomies">List Taxonomies</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/taxonomies"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/taxonomies"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1834,7 +1834,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>List of the taxonomies in the database.</p>
 
 <h2 id="show-taxonomy">Show Taxonomy</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/taxonomies/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/taxonomies/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1873,7 +1873,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>Select a taxonomy via the <code class="prettyprint">id</code>.</p>
 
 <h2 id="list-taxons-of-a-taxonomy">List Taxons of a Taxonomy</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/taxonomies/1/taxons"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/taxonomies/1/taxons"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1955,7 +1955,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>List all of the taxons that a taxonomy has a reference to.</p>
 
 <h2 id="show-taxon-of-a-taxonomy">Show Taxon of a Taxonomy</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/taxonomies/1/taxons/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/taxonomies/1/taxons/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1998,7 +1998,7 @@ Please note that you can ony access the orders that you own.</p>
 <p>Find a taxon that the taxonomy owns via the taxonomy&rsquo;s <code class="prettyprint">id</code> and the taxon&rsquo;s <code class="prettyprint">id</code>.</p>
 
 <h2 id="list-children-of-a-taxonomy">List Children of a Taxonomy</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/taxonomies/1/children"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/taxonomies/1/children"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -2047,7 +2047,7 @@ Please note that you can ony access the orders that you own.</p>
 This does <em>not</em> include the root taxon that would be included when listing all of the taxons of this taxonomy.</p>
 
 <h2 id="show-child-of-a-taxonomy">Show Child of a Taxonomy</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/taxonomies/1/children/2"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/taxonomies/1/children/2"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2095,7 +2095,7 @@ This does <em>not</em> include the root taxon that would be included when listin
           <h1 id="taxons">Taxons</h1>
 
 <h2 id="list-taxons">List Taxons</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/taxons"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/taxons"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -2143,7 +2143,7 @@ This does <em>not</em> include the root taxon that would be included when listin
 <p>List all the taxons in the database.</p>
 
 <h2 id="show-taxon">Show Taxon</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/taxons/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/taxons/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2186,7 +2186,7 @@ This does <em>not</em> include the root taxon that would be included when listin
 <p>Locate the taxon that you&rsquo;re looking for via its <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-taxonomy-of-a-taxon">Show Taxonomy of a Taxon</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/taxons/1/taxonomy"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/taxons/1/taxonomy"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2225,7 +2225,7 @@ This does <em>not</em> include the root taxon that would be included when listin
 <p>Display the taxonomy that a taxon belongs.</p>
 
 <h2 id="show-parent-of-a-taxon">Show Parent of a Taxon</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/taxons/2/parent"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/taxons/2/parent"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2268,7 +2268,7 @@ This does <em>not</em> include the root taxon that would be included when listin
 <p>Display the parent taxon that a taxon may belong to.</p>
 
 <h2 id="list-children-of-a-taxon">List Children of a Taxon</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/taxons/1/children"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/taxons/1/children"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -2316,7 +2316,7 @@ This does <em>not</em> include the root taxon that would be included when listin
 <p>List all the children that a taxon has.</p>
 
 <h2 id="show-child-of-a-taxon">Show Child of a Taxon</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/taxons/1/children/2"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/taxons/1/children/2"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2362,7 +2362,7 @@ This does <em>not</em> include the root taxon that would be included when listin
 <p>Find a child via its <code class="prettyprint">id</code> and its owners (taxon) <code class="prettyprint">id</code>.</p>
 
 <h2 id="list-products-of-a-taxon">List Products of a Taxon</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/taxons/1/products"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/taxons/1/products"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -2420,7 +2420,7 @@ This does <em>not</em> include the root taxon that would be included when listin
 <p>List all of the products that taxon owns via the taxons <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-product-of-a-taxon">Show Product of a Taxon</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/taxons/1/products/10"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/taxons/1/products/10"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2478,7 +2478,7 @@ This does <em>not</em> include the root taxon that would be included when listin
           <h1 id="variants">Variants</h1>
 
 <h2 id="list-variants">List Variants</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/variants"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/variants"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -2541,7 +2541,7 @@ This does <em>not</em> include the root taxon that would be included when listin
 <p>List all variants in the DB including master variants.</p>
 
 <h2 id="show-variant">Show Variant</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/variants/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/variants/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2602,7 +2602,7 @@ This does <em>not</em> include the root taxon that would be included when listin
 <p>Fetch a variant by its <code class="prettyprint">id</code>.</p>
 
 <h2 id="list-prices-of-a-variant">List Prices of a Variant</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/variants/1/prices"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/variants/1/prices"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -2651,7 +2651,7 @@ This does <em>not</em> include the root taxon that would be included when listin
 <p>List all of the prices for a variant.</p>
 
 <h2 id="show-price-of-a-variant">Show Price of a Variant</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/variants/1/prices/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/variants/1/prices/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2679,7 +2679,7 @@ This does <em>not</em> include the root taxon that would be included when listin
 <p>Fetch a price for a variant by the price and variants <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-product-of-a-variant">Show Product of a Variant</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/variants/1/product"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/variants/1/product"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2735,7 +2735,7 @@ This does <em>not</em> include the root taxon that would be included when listin
 <p>Fetch the product the a variant belongs to by the variant&rsquo;s <code class="prettyprint">id</code>.</p>
 
 <h2 id="list-option-values-of-a-variant">List Option Values of a Variant</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/variants/1/option_values"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/variants/1/option_values"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -2771,7 +2771,7 @@ This does <em>not</em> include the root taxon that would be included when listin
 <p>List all of the option values that belong to a variant via the variant&rsquo;s <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-option-value-of-a-variant">Show Option Value of a Variant</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/variants/1/option_values/1"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/variants/1/option_values/1"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2805,7 +2805,7 @@ This does <em>not</em> include the root taxon that would be included when listin
 <p>Fetch an option value via the option value&rsquo;s <code class="prettyprint">id</code> and the variant&rsquo;s <code class="prettyprint">id</code>.</p>
 
 <h2 id="list-images-of-a-variant">List Images of a Variant</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/variants/1/images"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/variants/1/images"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -2839,7 +2839,7 @@ This does <em>not</em> include the root taxon that would be included when listin
 <p>List all of the images of a variant via the variant&rsquo;s <code class="prettyprint">id</code>.</p>
 
 <h2 id="show-image-of-a-variant">Show Image of a Variant</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://kabuni.com/api/v2/variants/1/images/21"</span>
+<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/variants/1/images/21"</span>
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
