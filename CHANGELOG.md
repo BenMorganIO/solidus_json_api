@@ -121,6 +121,31 @@
 *   For Orders, you can now list them. A user can only view their own orders.
     If the user is an admin, they can view all of the orders.
 
+    [Ben A. Morgan](https://github.com/BenMorganIO)
+
+*   POST `/api/v2/line_items` now requires JSON API format instead of the rails
+    format.
+
+    ```shell
+    # Before
+    curl "https://example.com/api/v2/line_items"
+      -X POST
+      -d token=abc123
+      -d line_item[order_id]=1
+      -d line_item[variant_id]=1
+      -d line_item[quantity]=1
+
+    # After
+    curl "https://example.com/api/v2/line_items"
+      -X POST
+      -d token=abc123
+      -d data[attributes][order_id]=1
+      -d data[attributes][variant_id]=1
+      -d data[attributes][quantity]=1
+    ```
+
+    [Ben A. Morgan](https://github.com/BenMorganIO)
+
 ## 0.2.2
 
 *   The parent serializer for `Spree::BaseSerializer` is now configurable.
