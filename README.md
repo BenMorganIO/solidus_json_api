@@ -1,6 +1,6 @@
 # Spree::Api::V2
 
-[![Circle CI](https://circleci.com/gh/spree-contrib/solidus_json_api/tree/master.svg?style=svg&circle-token=e2f6283b074ca9febcafab729d466ded2334300c)](https://circleci.com/gh/spree-contrib/solidus_json_api/tree/master)
+[![Circle CI](https://circleci.com/gh/wildcardlabs/solidus_json_api.svg?style=svg&circle-token=e2f6283b074ca9febcafab729d466ded2334300c)](https://circleci.com/gh/wildcardlabs/solidus_json_api)
 
 A JSON API for Solidus.
 
