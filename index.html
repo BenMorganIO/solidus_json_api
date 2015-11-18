@@ -461,9 +461,9 @@ Please see the example requests to the side on how you my filter a kitten object
 <pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/line_items"</span>
   -X POST
   -d <span class="nv">token</span><span class="o">=</span>abc123
-  -d line_item[order_id]<span class="o">=</span>1
-  -d line_item[variant_id]<span class="o">=</span>1
-  -d line_item[quantity]<span class="o">=</span>1
+  -d data[attributes][order_id]<span class="o">=</span>1
+  -d data[attributes][variant_id]<span class="o">=</span>1
+  -d data[attributes][quantity]<span class="o">=</span>1
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"data"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -509,9 +509,9 @@ Please see the example requests to the side on how you my filter a kitten object
 <pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/line_items"</span>
   -X POST
   -d <span class="nv">token</span><span class="o">=</span>abc123
-  -d line_item[order_id]<span class="o">=</span>1
-  -d line_item[variant_id]<span class="o">=</span>1
-  -d line_item[quantity]<span class="o">=</span>100000000000
+  -d data[attributes][order_id]<span class="o">=</span>1
+  -d data[attributes][variant_id]<span class="o">=</span>1
+  -d data[attributes][quantity]<span class="o">=</span>100000000000
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"errors"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -534,9 +534,9 @@ Please see the example requests to the side on how you my filter a kitten object
 <pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/line_items"</span>
   -X POST
   -d <span class="nv">token</span><span class="o">=</span>abc123
-  -d line_item[order_id]<span class="o">=</span>0
-  -d line_item[variant_id]<span class="o">=</span>1
-  -d line_item[quantity]<span class="o">=</span>1
+  -d data[attributes][order_id]<span class="o">=</span>0
+  -d data[attributes][variant_id]<span class="o">=</span>1
+  -d data[attributes][quantity]<span class="o">=</span>1
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"errors"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -560,9 +560,9 @@ When this happens, you&rsquo;ll receive an error because of it.</p>
 <pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v2/line_items"</span>
   -X POST
   -d <span class="nv">token</span><span class="o">=</span>abc123
-  -d line_item[order_id]<span class="o">=</span>1
-  -d line_item[variant_id]<span class="o">=</span>1
-  -d line_item[quantity]<span class="o">=</span>1
+  -d data[attributes][order_id]<span class="o">=</span>1
+  -d data[attributes][variant_id]<span class="o">=</span>1
+  -d data[attributes][quantity]<span class="o">=</span>1
 </code></pre>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"errors"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
