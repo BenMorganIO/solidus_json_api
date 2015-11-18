@@ -3,7 +3,7 @@ module Spree
     module V2
       class LineItemsController < Spree::Api::V2::BaseController
         rescue_from ActiveRecord::RecordNotFound, with: :render_record_not_found_error
-        rescue_from ActiveRecord::RecordInvalid, with: :render_record_invalid_error
+        rescue_from Spree::Order::InsufficientStock, with: :render_insufficient_stock_error
         rescue_from RangeError, with: :render_range_error
 
         def create
@@ -23,7 +23,7 @@ module Spree
           render json: error_response(:quantity_too_high), status: 400
         end
 
-        def render_record_invalid_error
+        def render_insufficient_stock_error
           render json: error_response(:product_out_of_stock), status: 400
         end
 

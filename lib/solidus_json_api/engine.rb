@@ -1,9 +1,9 @@
-module SpreeApiV2
+module SolidusJsonApi
   class Engine < Rails::Engine
     require 'spree/core'
 
     isolate_namespace Spree
-    engine_name ENV['SOLIDUS_API'].nil? ? 'spree_api_v2' : 'solidus_api_v2'
+    engine_name 'solidus_json_api'
 
     # use rspec for tests
     config.generators do |g|

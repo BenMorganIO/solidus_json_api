@@ -1,4 +1,4 @@
-module SpreeApiV2
+module SolidusJsonApi
   mattr_accessor :parent_serializer
   @@parent_serializer = ActiveModel::Serializer
 

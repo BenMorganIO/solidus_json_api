@@ -1,5 +1,5 @@
 module Spree
-  class BaseSerializer < SpreeApiV2.parent_serializer
+  class BaseSerializer < SolidusJsonApi.parent_serializer
     def image_links(object)
       {
         original: object.url(:original),

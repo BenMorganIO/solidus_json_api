@@ -1,22 +1,22 @@
 # encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_api_v2'
+  s.name        = 'solidus_json_api'
   s.version     = '0.2.2'
-  s.summary     = 'The V2 API for Spree.'
+  s.summary     = 'A JSON API for Solidus.'
   s.description = 'Adds an assortment of new api endpoints that are JSON API compatible.'
   s.required_ruby_version = '>= 2.0.0'
 
   s.author    = 'Ben A. Morgan'
   s.email     = 'ben@benmorgan.io'
-  s.homepage  = 'http://spree-contrib.github.io/spree_api_v2'
+  s.homepage  = 'http://wildcardlabs.github.io/solidus_json_api'
 
   s.files       = `git ls-files`.split("\n")
   s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_api', '~> 3.0'
+  s.add_dependency 'solidus_api', '~> 1.0'
   s.add_dependency 'active_model_serializers', '= 0.10.0.rc2'
 
   s.add_development_dependency 'capybara', '~> 2.4'
