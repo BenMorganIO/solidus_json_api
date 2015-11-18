@@ -56,9 +56,9 @@ This endpoint allows you add a variant to a users order by creating a line item.
 curl "https://example.com/api/v2/line_items"
   -X POST
   -d token=abc123
-  -d line_item[order_id]=1
-  -d line_item[variant_id]=1
-  -d line_item[quantity]=100000000000
+  -d data[attributes][order_id]=1
+  -d data[attributes][variant_id]=1
+  -d data[attributes][quantity]=100000000000
 ```
 
 ```json
@@ -83,9 +83,9 @@ When requesting an insanely large amount of variants to be added to your order, 
 curl "https://example.com/api/v2/line_items"
   -X POST
   -d token=abc123
-  -d line_item[order_id]=0
-  -d line_item[variant_id]=1
-  -d line_item[quantity]=1
+  -d data[attributes][order_id]=0
+  -d data[attributes][variant_id]=1
+  -d data[attributes][quantity]=1
 ```
 
 ```json
@@ -111,9 +111,9 @@ When this happens, you'll receive an error because of it.
 curl "https://example.com/api/v2/line_items"
   -X POST
   -d token=abc123
-  -d line_item[order_id]=1
-  -d line_item[variant_id]=1
-  -d line_item[quantity]=1
+  -d data[attributes][order_id]=1
+  -d data[attributes][variant_id]=1
+  -d data[attributes][quantity]=1
 ```
 
 ```json
