@@ -72,6 +72,9 @@ curl "https://example.com/api/v2/orders"
 }
 ```
 
+List all of the orders in the DB if you're an admin.
+If you're a standard user, then only the orders that you own are listed.
+
 ## Show Order
 
 ```shell
