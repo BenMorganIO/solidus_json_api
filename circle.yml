@@ -7,6 +7,11 @@ machine:
   ruby:
     version: 2.2.3
 
+dependencies:
+  override:
+    - GEMNAME=solidus_json_api bundle install
+    - GEMNAME=spree_json_api bundle install
+
 test:
   override:
     - bundle exec rake GEMNAME=solidus_json_api
