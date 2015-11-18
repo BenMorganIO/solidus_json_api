@@ -6,8 +6,3 @@ machine:
     - postgresql
   ruby:
     version: 2.2.3
-
-test:
-  override:
-    - bundle exec rake GEMNAME=solidus_json_api
-    - GEMNAME=spree_json_api bundle install && bundle exec rake GEMNAME=spree_json_api

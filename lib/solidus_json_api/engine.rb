@@ -3,7 +3,7 @@ module SolidusJsonApi
     require 'spree/core'
 
     isolate_namespace Spree
-    engine_name ENV['SPREE_API'].nil? ? 'solidus_json_api' : 'spree_json_api'
+    engine_name 'solidus_json_api'
 
     # use rspec for tests
     config.generators do |g|

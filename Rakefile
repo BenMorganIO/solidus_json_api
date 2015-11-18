@@ -1,7 +1,6 @@
 require 'bundler'
 
-gemname = ENV['GEMNAME'] || 'solidus_json_api'
-Bundler::GemHelper.install_tasks name: gemname
+Bundler::GemHelper.install_tasks
 
 require 'rspec/core/rake_task'
 
