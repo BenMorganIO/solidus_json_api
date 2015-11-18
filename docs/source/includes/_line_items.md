@@ -15,8 +15,8 @@ curl "https://example.com/api/v2/line_items"
 {
   "data" : {
     "attributes" : {
-      "additional_tax_total" : 0,
-      "adjustment_total" : 0.0,
+      "additional_tax_total" : "0",
+      "adjustment_total" : "0.0",
       "amount" : "10.0",
       "cost_price" : "17.0",
       "currency" : "CAD",

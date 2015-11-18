@@ -6,7 +6,7 @@ curl "https://example.com/api/v1/endpoint"
   -H "X-Spree-Token: abc123"
 
 # Specifying the token as a param.
-curl "/api/v1/endpoint"
+curl "https://example.com/api/v1/endpoint"
   -d token=abc123
 ```
 

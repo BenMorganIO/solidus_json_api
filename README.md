@@ -4,7 +4,7 @@
 
 A JSON API for Solidus.
 
-Documentation: [http://wildcardlabs.github.io/solidus_json_api](http://wildcardlabs.github.io/solidus_json_api)
+Documentation: [http://solidusapi.wildcardlabs.com](http://solidusapi.wildcardlabs.com)
 
 ## Installation
 
