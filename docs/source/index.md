@@ -11,7 +11,6 @@ toc_footers:
   - <a href="https://github.com/tripit/slate" target="_blank"> Documentation Powered by Slate </a>
 
 includes:
-  - authentication
   - errors
   - pagination
   - filtering
