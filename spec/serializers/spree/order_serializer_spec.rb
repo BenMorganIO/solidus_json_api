@@ -14,7 +14,6 @@ describe Spree::OrderSerializer do
             "channel" : "spree",
             "completed_at" : "#{order.completed_at.iso8601(3)}",
             "confirmation_delivered" : false,
-            "considered_risky" : false,
             "currency" : "USD",
             "display_additional_tax_total" : "$0.00",
             "display_adjustment_total" : "$0.00",
