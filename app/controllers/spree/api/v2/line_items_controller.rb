@@ -16,7 +16,7 @@ module Spree
         private
 
         def line_item_params
-          params.require(:line_item).permit(:variant_id, :order_id, :quantity)
+          params.require(:data).require(:attributes).permit(:variant_id, :order_id, :quantity)
         end
 
         def render_range_error

@@ -8,19 +8,27 @@ describe Spree::Api::V2::LineItemsController do
   before { user.generate_spree_api_key! }
 
   describe '#create' do
-    let(:line_item_params) { { order_id: order.id, variant_id: variant.id, quantity: 1 } }
+    let(:line_item_data) do
+      {
+        attributes: {
+          order_id: order.id,
+          variant_id: variant.id,
+          quantity: 1
+        }
+      }
+    end
 
     context 'on success' do
       it 'will respond with line item' do
-        post :create, token: user.spree_api_key, line_item: line_item_params
+        post :create, token: user.spree_api_key, data: line_item_data
         expect(JSON.parse(response.body)['data']['type']).to eql 'spree_line_items'
       end
     end
 
     context 'when out of range' do
       before do
-        post :create, token: user.spree_api_key,
-                      line_item: line_item_params.merge(quantity: 123_123_123_123)
+        line_item_data[:attributes][:quantity] = 123_123_123_123
+        post :create, token: user.spree_api_key, data: line_item_data
       end
 
       it 'will respond with quantity too high error' do
@@ -40,7 +48,8 @@ describe Spree::Api::V2::LineItemsController do
 
     context 'when record not found' do
       before do
-        post :create, token: user.spree_api_key, line_item: line_item_params.merge(order_id: 0)
+        line_item_data[:attributes][:order_id] = 0
+        post :create, token: user.spree_api_key, data: line_item_data
       end
 
       it 'will respond with record not found error' do
@@ -64,8 +73,8 @@ describe Spree::Api::V2::LineItemsController do
       before do
         quantity = stock_item.count_on_hand + 1
         stock_item.update(backorderable: false)
-        post :create, token: user.spree_api_key,
-                      line_item: line_item_params.merge(quantity: quantity)
+        line_item_data[:attributes][:quantity] = quantity
+        post :create, token: user.spree_api_key, data: line_item_data
       end
 
       it 'will respond with product out of stock' do

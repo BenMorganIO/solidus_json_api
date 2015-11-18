@@ -6,9 +6,9 @@
 curl "https://example.com/api/v2/line_items"
   -X POST
   -d token=abc123
-  -d line_item[order_id]=1
-  -d line_item[variant_id]=1
-  -d line_item[quantity]=1
+  -d data[attributes][order_id]=1
+  -d data[attributes][variant_id]=1
+  -d data[attributes][quantity]=1
 ```
 
 ```json
