@@ -9,7 +9,6 @@ toc_footers:
   - <a href="https://guides.spreecommerce.com/api/" target="_blank"> Spree API Documentation </a>
   - <a href="http://jsonapi.org/" target="_blank"> JSON API Documentation </a>
   - <a href="https://github.com/tripit/slate" target="_blank"> Documentation Powered by Slate </a>
-  - <a href="https://kabuni.com?utm_source=SpreeApiV2Docs&utm_medium=sponsor&utm_campaign=opensource"> Kabuni, Proud Sponsor </a>
 
 includes:
   - authentication
