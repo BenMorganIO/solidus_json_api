@@ -8,16 +8,16 @@ describe Spree::VariantSerializer do
       {
         "data" : {
           "attributes" : {
-            "depth" : "#{variant.depth}",
+            "depth" : #{variant.depth.to_json},
             "display_price" : "#{variant.display_price}",
-            "height" : "#{variant.height}",
+            "height" : #{variant.height.to_json},
             "is_master" : #{variant.is_master},
             "name" : "#{variant.name}",
             "position" : #{variant.position},
             "price" : "#{variant.price}",
             "sku" : "#{variant.sku}",
             "weight" : "#{variant.weight}",
-            "width" : "#{variant.width}"
+            "width" : #{variant.width.to_json}
           },
           "relationships" : {
             "images" : {
