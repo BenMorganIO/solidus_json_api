@@ -76,64 +76,6 @@ Please follow its guidelines to learn about:</p>
 <li>The Document Structure</li>
 </ul>
 
-          <h1 id="authentication">Authentication</h1>
-<pre class="highlight shell"><code><span class="c"># Specifying the token as a header.</span>
-curl <span class="s2">"https://example.com/api/v1/endpoint"</span>
-  -H <span class="s2">"X-Spree-Token: abc123"</span>
-
-<span class="c"># Specifying the token as a param.</span>
-curl <span class="s2">"https://example.com/api/v1/endpoint"</span>
-  -d <span class="nv">token</span><span class="o">=</span>abc123
-</code></pre>
-
-<blockquote>
-<p>Make sure to replace <code class="prettyprint">abc123</code> with your API key.</p>
-</blockquote>
-
-<p>Spree uses API keys to allow access to the API.
-To obtain a token, you must either create a new user, or, via token authentication, &ldquo;log&rdquo; the user in.</p>
-
-<p>Spree does not expect every request to require an API key (such as reading public product data).</p>
-
-<h2 id="authenticate-a-user-login">Authenticate a User (Login)</h2>
-<pre class="highlight shell"><code>curl <span class="s2">"https://example.com/api/v1/account/signin"</span>
-  -X POST
-  -d user[email]<span class="o">=</span>spree@example.com
-  -d user[password]<span class="o">=</span>spree123
-</code></pre>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"spree_users"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"spree@example.com"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"job_title"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"based_city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"experience"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default/avatar-placeholder.jpg"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"biography"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"client_budget"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"license_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"certification_authority"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"is_newsletter_subscribed"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"is_designer_available"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nt">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"store"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>To login users, you will need to supply the <code class="prettyprint">email</code> and <code class="prettyprint">password</code>.
-The response will be a user data object with the token in the body.
-The response&rsquo;s headers will include a <code class="prettyprint">X-Spree-Token</code> which is what you will use as the token.</p>
-
           <h1 id="errors">Errors</h1>
 
 <p>The Solidus JSON API uses the following error codes:</p>
