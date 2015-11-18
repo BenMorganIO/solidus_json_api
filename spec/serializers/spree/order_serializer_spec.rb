@@ -24,7 +24,7 @@ describe Spree::OrderSerializer do
             "display_total" : "$110.00",
             "email" : "#{order.email}",
             "included_tax_total" : "0.0",
-            "item_count" : 0,
+            "item_count" : 1,
             "item_total" : "10.0",
             "number" : "#{order.number}",
             "payment_state" : null,
