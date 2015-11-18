@@ -21,14 +21,14 @@ task :test_app do
   ENV["RAILS_ENV"] = 'test'
 
   Spree::DummyGeneratorHelper.inject_extension_requirements = true
-  Spree::DummyGenerator.start %w(--lib_name=spree_api_v2 --quiet)
+  Spree::DummyGenerator.start %w(--lib_name=solidus_json_api --quiet)
 
   Spree::InstallGenerator.class_eval do
     def config_spree_yml() end
   end
 
   Spree::InstallGenerator.start %w(
-    --lib_name=spree_api_v2 --auto-accept --migrate=false --seed=false
+    --lib_name=solidus_json_api --auto-accept --migrate=false --seed=false
     --sample=false --quiet --user_class=Spree::LegacyUser
   )
 
