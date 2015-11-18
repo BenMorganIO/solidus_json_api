@@ -18,7 +18,6 @@ curl "https://example.com/api/v2/orders/:id"
       "channel" : "spree",
       "completed_at" : "2015-09-08T04:04:01.162Z",
       "confirmation_delivered" : false,
-      "considered_risky" : false,
       "currency" : "CAD",
       "display_additional_tax_total" : "$0.00 CAD",
       "display_adjustment_total" : "$0.00 CAD",
