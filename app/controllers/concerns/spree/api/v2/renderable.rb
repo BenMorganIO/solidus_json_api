@@ -16,21 +16,22 @@ module Spree
           render json: object, include: params[:include]
         end
 
+        def filter_params
+          params.fetch(:filter, {}).permit(*filter_attributes).transform_values do |value|
+            value.respond_to?(:each) ? value : value.split(',')
+          end
+        end
+
         private
 
         def error_response(resource)
           Spree::ErrorSerializer.new(resource).as_json
         end
 
-        def filter_params
-          params.fetch(:filter, {}).permit(filter_attributes << :id).transform_values do |value|
-            value.split(',')
-          end
-        end
-
         def filter_attributes
-          serializer = "Spree::#{controller_name.camelize.singularize}Serializer"
-          serializer.constantize._attributes
+          attributes = serializer_attributes
+          attributes << :id unless attributes.include?(:id)
+          attributes.map { |a| [{ a => [] }, a] }.flatten
         end
 
         def page_details(collection)
@@ -44,6 +45,11 @@ module Spree
 
         def page_params
           params.fetch(:page, {}).permit(:number, :size)
+        end
+
+        def serializer_attributes
+          serializer = "Spree::#{controller_name.camelize.singularize}Serializer"
+          serializer.constantize._attributes
         end
       end
     end

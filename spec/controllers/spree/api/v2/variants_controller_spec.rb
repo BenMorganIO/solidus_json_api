@@ -42,12 +42,10 @@ describe Spree::Api::V2::VariantsController do
         expect(variant_ids).to include variant.id.to_s
       end
 
-      it 'will not list another products variants' do
+      it 'will not list another products variant' do
         get :index, option_value_id: new_option_value.id
-        variant_ids = parse_json(response.body)['data'].map do |variant|
-          variant['id']
-        end
-        expect(variant_ids).to_not include variant.id.to_s
+        data = parse_json(response.body)['data']
+        expect(data).to be_empty
       end
     end
   end

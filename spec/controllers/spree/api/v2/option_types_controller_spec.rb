@@ -25,10 +25,8 @@ describe Spree::Api::V2::OptionTypesController do
 
       it 'will not list option types belonging to a different product' do
         get :index, product_id: new_product.id
-        option_type_ids = parse_json(response.body)['data'].map do |option_type|
-          option_type['id']
-        end
-        expect(option_type_ids).to_not include option_type.id.to_s
+        data = parse_json(response.body)['data']
+        expect(data).to be_empty
       end
     end
   end
