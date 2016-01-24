@@ -15,12 +15,8 @@ module Spree
 
     def resource_error_objects(messages)
       messages.map do |title, detail|
-        if title.is_a?(Hash) && title[:title]
-          error_object title[:title], title[:detail]
-        else
-          pointer = "data/attributes/#{title.to_s.split('.').join('/')}"
-          error_object title.to_s.gsub('.', ' '), detail.to_sentence, pointer: pointer
-        end
+        pointer = "data/attributes/#{title.to_s.split('.').join('/')}"
+        error_object title.to_s.gsub('.', ' '), detail.to_sentence, pointer: pointer
       end
     end
 
@@ -31,9 +27,7 @@ module Spree
         detail_translation = Spree.t("api.errors.#{resource}.detail")
         [error_object(title_translation, detail_translation)]
       when Array
-        resource.map do |errors|
-          resource_error_objects errors
-        end.flatten
+        resource.map { |errors| resource_error_objects errors }.flatten
       else
         resource_error_objects resource.errors.messages
       end
