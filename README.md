@@ -1,6 +1,8 @@
 # Solidus JSON API
 
-[![Circle CI](https://circleci.com/gh/wildcardlabs/solidus_json_api.svg?style=svg&circle-token=e2f6283b074ca9febcafab729d466ded2334300c)](https://circleci.com/gh/wildcardlabs/solidus_json_api)
+[![Circle CI](https://circleci.com/gh/wildcardlabs/solidus_json_api.svg?style=badge&circle-token=e2f6283b074ca9febcafab729d466ded2334300c)](https://circleci.com/gh/wildcardlabs/solidus_json_api)
+
+[![Coverage Status](https://coveralls.io/repos/github/wildcardlabs/solidus_json_api/badge.svg?branch=master)](https://coveralls.io/github/wildcardlabs/solidus_json_api?branch=master)
 
 A JSON API for Solidus.
 
