@@ -2,6 +2,15 @@
 
 ## 0.3.0
 
+*   Add Friendly ID Support for `Spree::Product`
+
+    When a request came in for `/api/v2/products/example-product` and there was
+    a product in the DB with a corresponding slug, it would return a 404. The
+    controller now calls `Spree::Product.friendly` before rendering any
+    instance.
+
+    [Ben A. Morgan](https://github.com/BenMorganIO)
+
 *   Drop Spree Support
 
     After trying to get the spree support working, I’ve concluded that its just
