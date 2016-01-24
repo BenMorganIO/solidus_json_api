@@ -2,6 +2,14 @@
 
 ## 0.3.0
 
+*   Support `status` and `code` for Error Objects
+
+    When an error is handed back to the user, we now provide the status and the
+    code keys. This adds another feature to the API that is supported by the
+    JSON API specification.
+
+    [Ben A. Morgan](https://github.com/BenMorganIO)
+
 *   Add Friendly ID Support for `Spree::Product`
 
     When a request came in for `/api/v2/products/example-product` and there was

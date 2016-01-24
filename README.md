@@ -37,8 +37,8 @@ Below, you'll see a bullet list of requirements that are both specific to the ap
   - [ ] `id`
   - [ ] `links`
      - [ ] `about`
-  - [ ] `status`
-  - [ ] `code`
+  - [x] `status`
+  - [x] `code`
   - [x] `title`
   - [x] `detail`
   - [ ] `source`
