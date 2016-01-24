@@ -1,9 +1,10 @@
 module Spree
   class ErrorSerializer
-    attr_accessor :resource, :options
+    attr_accessor :resource, :options, :response
 
     def initialize(resource, options = {})
       @resource = resource
+      @response = options.delete(:response)
       @options = options
     end
 
@@ -40,7 +41,15 @@ module Spree
         title: title.to_s.titleize
       }
 
+      error.merge!(response_attributes) if response.present?
       pointer.present? ? error.merge(pointer: pointer) : error
+    end
+
+    def response_attributes
+      {
+        status: response.status_message,
+        code: response.code
+      }
     end
   end
 end

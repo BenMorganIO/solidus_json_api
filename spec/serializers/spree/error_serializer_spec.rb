@@ -112,5 +112,30 @@ describe Spree::ErrorSerializer do
         }
       JSON
     end
+
+    context 'can set a response when it is present' do
+      let(:response) do
+        Response ||= Struct.new(:status_message, :code)
+        Response.new('OK', 200)
+      end
+
+      subject { described_class.new(:test, response: response).as_json }
+
+      it do
+        should be_json_eql <<-JSON
+          {
+            "errors" : [
+              {
+                "code" : 200,
+                "detail" : #{Spree.t('api.errors.test.detail').to_json},
+                "meta" : {},
+                "status" : "OK",
+                "title" : #{Spree.t('api.errors.test.title').titleize.to_json}
+              }
+            ]
+          }
+        JSON
+      end
+    end
   end
 end
