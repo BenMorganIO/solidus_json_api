@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'active_model_serializers', '= 0.10.0.rc2'
 
   s.add_development_dependency 'coffee-rails'
+  s.add_development_dependency 'coveralls'
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'factory_girl', '~> 4.5'
   s.add_development_dependency 'ffaker'
