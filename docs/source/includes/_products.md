@@ -66,6 +66,10 @@ List all of the products in the database.
 
 ```shell
 curl "https://example.com/api/v2/products/1"
+
+# or by slug
+
+curl "https://example.com/api/v2/products/ruby-on-rails-tote"
 ```
 
 ```json

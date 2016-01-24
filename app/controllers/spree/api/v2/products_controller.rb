@@ -16,7 +16,7 @@ module Spree
           elsif params[:image_id]
             render_instance Spree::Image.variants.find(params[:image_id]).viewable.product
           else
-            render_instance products.find(params[:id])
+            render_instance products.friendly.find(params[:id])
           end
         end
 

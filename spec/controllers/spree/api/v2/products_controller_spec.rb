@@ -36,6 +36,12 @@ describe Spree::Api::V2::ProductsController do
       expect(parse_json(response.body)['data']['id']).to eql product.id.to_s
     end
 
+    it 'can find a product by slug' do
+      get :show, id: product.slug
+      product_id = parse_json(response.body)['data']['id']
+      expect(product_id).to eql product.id.to_s
+    end
+
     context 'by taxon id' do
       it 'will respond with the taxons products' do
         get :show, taxon_id: taxon.id, id: product.id
