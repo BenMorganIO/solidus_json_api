@@ -30,10 +30,8 @@ describe Spree::Api::V2::ImagesController do
 
       it 'will not list another products images' do
         get :index, product_id: new_product.id
-        image_ids = parse_json(response.body)['data'].map do |image|
-          image['id']
-        end
-        expect(image_ids).to_not include image.id.to_s
+        data = parse_json(response.body)['data']
+        expect(data).to be_empty
       end
     end
 

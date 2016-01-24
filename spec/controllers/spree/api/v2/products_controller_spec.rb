@@ -22,10 +22,8 @@ describe Spree::Api::V2::ProductsController do
 
       it 'will not respond with a product that is not associated to the taxon' do
         get :index, taxon_id: new_taxon.id
-        product_ids = parse_json(response.body)['data'].map do |products|
-          products['id']
-        end
-        expect(product_ids).to_not include product.id.to_s
+        data = parse_json(response.body)['data']
+        expect(data).to be_empty
       end
     end
   end
