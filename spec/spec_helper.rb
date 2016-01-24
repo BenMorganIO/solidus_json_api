@@ -1,7 +1,9 @@
 require 'simplecov'
-require 'coveralls'
 
-Coveralls.wear!('rails')
+if ENV['CI']
+  require 'coveralls'
+  Coveralls.wear!('rails')
+end
 
 SimpleCov.start do
   add_filter 'spec/dummy'
