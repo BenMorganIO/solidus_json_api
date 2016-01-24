@@ -20,15 +20,15 @@ module Spree
         end
 
         def render_range_error
-          render json: error_response(:quantity_too_high), status: 400
+          render_error :quantity_too_high
         end
 
         def render_insufficient_stock_error
-          render json: error_response(:product_out_of_stock), status: 400
+          render_error :product_out_of_stock
         end
 
         def render_record_not_found_error
-          render json: error_response(:record_not_found), status: 400
+          render_error :record_not_found
         end
       end
     end

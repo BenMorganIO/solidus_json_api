@@ -13,35 +13,35 @@ curl "https://example.com/api/v2/line_items"
 
 ```json
 {
-  "data" : {
-    "attributes" : {
-      "additional_tax_total" : "0",
-      "adjustment_total" : "0.0",
-      "amount" : "10.0",
-      "cost_price" : "17.0",
-      "currency" : "CAD",
-      "display_amount" : "$10.00 CAD",
-      "display_price" : "$10.00 CAD",
-      "display_total" : "$10.00 CAD",
-      "order_id" : 1,
-      "price" : "10.0",
-      "quantity" : 1,
-      "total" : "10.0",
-      "variant_id" : 1
+  "data": {
+    "attributes": {
+      "additional_tax_total": "0",
+      "adjustment_total": "0.0",
+      "amount": "10.0",
+      "cost_price": "17.0",
+      "currency": "CAD",
+      "display_amount": "$10.00 CAD",
+      "display_price": "$10.00 CAD",
+      "display_total": "$10.00 CAD",
+      "order_id": 1,
+      "price": "10.0",
+      "quantity": 1,
+      "total": "10.0",
+      "variant_id": 1
     },
-    "relationships" : {
-      "order" : {
-        "data" : {
-          "type" : "spree_orders"
+    "relationships": {
+      "order": {
+        "data": {
+          "type": "spree_orders"
         }
       },
-      "variant" : {
-        "data" : {
-          "type" : "spree_variants"
+      "variant": {
+        "data": {
+          "type": "spree_variants"
         }
       }
     },
-    "type" : "spree_line_items"
+    "type": "spree_line_items"
   }
 }
 ```
@@ -63,11 +63,13 @@ curl "https://example.com/api/v2/line_items"
 
 ```json
 {
-  "errors" : [
+  "errors": [
     {
-      "detail" : "Quantity is too High",
-      "meta" : {},
-      "title" : "The quantity that you have submitted is astronomically high, please tone it down a bit."
+      "code": "400",
+      "detail": "Quantity is too High",
+      "meta": {},
+      "status": "Bad Request",
+      "title": "The quantity that you have submitted is astronomically high, please tone it down a bit."
     }
   ]
 }
@@ -90,11 +92,13 @@ curl "https://example.com/api/v2/line_items"
 
 ```json
 {
-  "errors" : [
+  "errors": [
     {
-      "detail" : "Record Not Found",
-      "meta" : {},
-      "title" : "One of the records that you were looking for could not be found. Please check to see if the record exists or if you're permitted to read it"
+      "code": "400",
+      "detail": "Record Not Found",
+      "meta": {},
+      "status": "Bad Request",
+      "title": "One of the records that you were looking for could not be found. Please check to see if the record exists or if you're permitted to read it"
     }
   ]
 }
@@ -118,11 +122,13 @@ curl "https://example.com/api/v2/line_items"
 
 ```json
 {
-  "errors" : [
+  "errors": [
     {
-      "detail" : "Product is out of Stock",
-      "meta" : {},
-      "title" : "This product is out of stock for the selected quantity."
+      "code": "400",
+      "detail": "Product is out of Stock",
+      "meta": {},
+      "status": "Bad Request",
+      "title": "This product is out of stock for the selected quantity."
     }
   ]
 }
