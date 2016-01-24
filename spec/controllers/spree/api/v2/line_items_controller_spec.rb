@@ -36,8 +36,10 @@ describe Spree::Api::V2::LineItemsController do
           {
             "errors" : [
               {
+                "code": "400",
                 "detail" : #{Spree.t('api.errors.quantity_too_high.detail').gsub("\n", '').to_json},
                 "meta" : {},
+                "status": "Bad Request",
                 "title" : #{Spree.t('api.errors.quantity_too_high.title').titleize.to_json}
               }
             ]
@@ -57,8 +59,10 @@ describe Spree::Api::V2::LineItemsController do
           {
             "errors" : [
               {
+                "code": "400",
                 "detail" : #{Spree.t('api.errors.record_not_found.detail').gsub("\n", '').to_json},
                 "meta" : {},
+                "status": "Bad Request",
                 "title" : #{Spree.t('api.errors.record_not_found.title').to_json}
               }
             ]
@@ -82,8 +86,10 @@ describe Spree::Api::V2::LineItemsController do
           {
             "errors" : [
               {
+                "code": "400",
                 "detail" : "#{Spree.t('api.errors.product_out_of_stock.detail').gsub("\n", '')}",
                 "meta" : {},
+                "status": "Bad Request",
                 "title" : #{Spree.t('api.errors.product_out_of_stock.title').titleize.to_json}
               }
             ]

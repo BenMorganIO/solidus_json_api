@@ -24,8 +24,14 @@ module Spree
 
         private
 
-        def error_response(resource)
-          Spree::ErrorSerializer.new(resource).as_json
+        def render_error(resource, options = {})
+          response.status = options.delete(:status) || 400
+          options[:response] = response
+          render json: error_response(resource, options)
+        end
+
+        def error_response(resource, options = {})
+          Spree::ErrorSerializer.new(resource, options).as_json
         end
 
         def filter_attributes
