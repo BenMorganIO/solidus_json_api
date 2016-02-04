@@ -27,9 +27,9 @@ Below, you'll see a bullet list of requirements that are both specific to the ap
 
 - [ ] Manage permissions with CanCanCan.
 - [ ] Add support for XML.
-- [ ] Add support for pagination.
+- [x] Add support for pagination.
   - [x] `page` keyword support for pagination.
-  - [ ] `links` document at the root for `self`, `next`, `prev`, `last`, and `first`.
+  - [x] `links` document at the root for `self`, `next`, `prev`, `last`, and `first`.
 - [ ] Add support for filtration.
   - [x] Be able to filter onto the main data object.
   - [ ] Be able to filter the included relationships.
