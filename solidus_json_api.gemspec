@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'solidus_api', '~> 1.0'
-  s.add_dependency 'active_model_serializers', '= 0.10.0.rc2'
+  s.add_dependency 'active_model_serializers', '= 0.10.0.rc4'
 
   s.add_development_dependency 'coffee-rails'
   s.add_development_dependency 'coveralls'
