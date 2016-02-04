@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1
+
+*   Bump Active Model Serializer from rc2 to rc4.
+
+    [Ben A. Morgan](https://github.com/BenMorganIO)
+
 ## 0.3.0
 
 *   Support `status` and `code` for Error Objects
