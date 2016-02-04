@@ -7,8 +7,6 @@ module Spree
     belongs_to :parent, serializer: TaxonSerializer
     has_many :children, serializer: TaxonSerializer
 
-    private
-
     def links
       image_links object.icon
     end

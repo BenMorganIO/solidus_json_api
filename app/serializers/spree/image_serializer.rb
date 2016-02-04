@@ -4,8 +4,6 @@ module Spree
 
     belongs_to :viewable
 
-    private
-
     def links
       image_links object.attachment
     end
