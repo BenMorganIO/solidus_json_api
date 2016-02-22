@@ -39,7 +39,7 @@ We currently only have a language binding in Shell.
 You can view code examples in the dark area to the right.
 
 This example API documentation page was created with [Slate](http://github.com/tripit/slate).
-Feel free to edit it and use it as a base for your own API's documentation.
+Feel free to edit it and use it as a base for documenting APIs of your own.
 
 This JSON API is formatted after the [JSON API spec](http://jsonapi.org).
 Please follow its guidelines to learn about:
