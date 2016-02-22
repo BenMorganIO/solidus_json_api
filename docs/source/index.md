@@ -32,7 +32,7 @@ search: true
 
 # Introduction
 
-Welcome to the Soidus JSON API!
+Welcome to the Solidus JSON API!
 You can use our API to grab data from our database and make updates.
 
 We currently only have a language binding in Shell.
